@@ -5,6 +5,7 @@
     "openai": "3.2.1"
   },
   "devDependencies": {
+    "dotenv": "^16.4.5",
     "vite": "latest"
   },
   "scripts": {

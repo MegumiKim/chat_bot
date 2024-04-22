@@ -3,8 +3,7 @@ export async function fetchReq(conversationArr) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization:
-        "Bearer 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",
+      Authorization: "Bearer ",
     },
     body: JSON.stringify({
       messages: conversationArr,
