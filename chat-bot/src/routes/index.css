@@ -2,7 +2,7 @@
   --border-rad-lg: 15px;
   --medium-light-text: #586e88;
   --light-text: #fcfcfc;
-  --bg-dark: #16202c;
+  --bg-dark: #051120;
 }
 
 *,
@@ -21,29 +21,22 @@ body {
 
 main {
   background-color: var(--bg-dark);
-  /* background-image: url("./images/fjell.jpg"); */
   background-size: cover;
   height: 100vh;
   display: flex;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+  flex-direction: column;
 }
 
 /* chatbot elements */
 
 .chatbot-container {
   flex: 2;
-  /* background-color: #16202c; */
   width: 100%;
-  max-width: 1000px;
   height: 100%;
-  min-height: 380px;
-  /* border-radius: var(--border-rad-lg); */
   display: flex;
   flex-direction: column;
-  padding: 1em;
-  border-right: var(--medium-light-text) solid 3px;
+  padding: 2em;
+  border-left: var(--medium-light-text) solid 1px;
 }
 
 .chatbot-container > * {
@@ -54,24 +47,9 @@ main {
   flex: 1;
   padding: 1rem;
 }
+
 .chatbot-header {
-  display: grid;
-  grid-template-areas:
-    "logo . . "
-    "logo title .."
-    "logo subtitle clear-btn";
-}
-
-.chatbot-header > * {
-  margin: 0.11em;
-}
-
-.logo {
-  grid-area: logo;
-  height: 50px;
-  width: 50px;
-  object-fit: cover;
-  border-radius: 50%;
+  padding: 1em;
 }
 
 label {
@@ -96,13 +74,11 @@ fieldset {
 }
 
 .clear-btn {
-  grid-area: clear-btn;
   height: 2.5rem;
   padding: 0;
-  width: 50%;
+  width: 100px;
   color: var(--medium-light-text);
   font-size: 20px;
-  margin: 0 auto;
 }
 
 .clear-btn:hover {
@@ -161,12 +137,14 @@ button {
   padding: 1em;
 }
 
-input[type="text"] {
+textarea {
   color: #fcfcfc;
   width: 100%;
+  height: 200px;
   border-right: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: 16px;
+  background: none;
+  padding: 10px;
 }
 
 .submit-button {
@@ -198,4 +176,10 @@ h2 {
   font-weight: 700;
   grid-area: subtitle;
   text-transform: uppercase;
+}
+
+@media (min-width: 800px) {
+  main {
+    flex-direction: row;
+  }
 }
